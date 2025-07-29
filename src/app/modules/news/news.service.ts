@@ -10,7 +10,7 @@ import { NewsModule } from "./news.interface";
 const getAllNewsFromDB = async (query: Record<string, unknown>) => {
   const userQuery = new QueryBuilder(News.find(), query)
     .search(NewsSearchableFields)
-    .filter()
+    .filter(query)
     .sort()
     .paginate()
     .fields();

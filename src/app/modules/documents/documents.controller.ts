@@ -7,6 +7,9 @@ import { UploadDocumentService } from "./documents.service";
 
 
 const UploadDocument = catchAsync(async (req, res) => {
+ if (!req.file) {
+    throw new Error("No file provided"); // or create a custom AppError
+  }
 
   const result = await UploadDocumentService.UploadDocument(req.file, req.body);
   sendResponse(res, {

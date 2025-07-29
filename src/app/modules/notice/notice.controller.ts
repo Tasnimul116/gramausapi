@@ -38,7 +38,7 @@ const updateNotice = catchAsync(async (req, res) => {
 });
 const deleteNotice = catchAsync(async (req, res) => {
   const { id } = req.params;
-  const result = await NoticeServices.deleteNoticeIntoDB (id, req.body);
+  const result = await NoticeServices.deleteNoticeIntoDB (id);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

@@ -94,7 +94,7 @@ userSchema.statics.hashPassword = async function (
 userSchema.pre("save", async function (next) {
   const user = this; // doc
   if (user.isModified("password")) {
-    user?.password = await bcrypt.hash(
+    user.password = await bcrypt.hash(
       user?.password,
       Number(config.bcrypt_salt_rounds)
     );
@@ -104,7 +104,7 @@ userSchema.pre("save", async function (next) {
 
 // set '' after saving password
 userSchema.post("save", function (doc, next) {
-  doc?.password = "";
+  doc.password = "";
   next();
 });
 
