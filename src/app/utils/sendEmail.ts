@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import ejs from "ejs";
+// import ejs from "ejs";
 import config from "../config";
 
 export const sendEmail = async (
@@ -22,23 +22,23 @@ export const sendEmail = async (
   });
 
   try {
-    const html = await ejs.renderFile(
-      __dirname + "/../static/email_template/" + template + ".ejs",
-      {
-        otp: otp,
-        name: name,
-        title: title,
-      }
-    );
-    const mailOptions = {
-      from: "mahitasnimulhasan20@gmail.com",
-      to,
-      subject,
-      html: html,
-    };
+    // const html = await ejs.renderFile(
+    //   __dirname + "/../static/email_template/" + template + ".ejs",
+    //   {
+    //     otp: otp,
+    //     name: name,
+    //     title: title,
+    //   }
+    // );
+    // const mailOptions = {
+    //   from: "mahitasnimulhasan20@gmail.com",
+    //   to,
+    //   subject,
+    //   html: html,
+    // };
 
-    const info = await transporter.sendMail(mailOptions);
-    return info;
+    // const info = await transporter.sendMail(mailOptions);
+    // return info;
   } catch (error) {
     console.error("Error sending email:", error);
     throw error;
