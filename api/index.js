@@ -1,5 +1,16 @@
 // api/index.js
+const { createServer } = require('aws-serverless-express');
+const app = require('../dist/server').default;
+
+let server;
+
+function getServer() {
+  if (!server) {
+    server = createServer(app);
+  }
+  return server;
+}
+
 module.exports = (req, res) => {
-  res.statusCode = 200;
-  res.json({ message: 'Hello from Vercel!' });
+  return getServer()(req, res);
 };
