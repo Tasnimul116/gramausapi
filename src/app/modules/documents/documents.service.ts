@@ -3,7 +3,7 @@ import httpStatus from 'http-status';
 import AppError from '../../errors/AppError';
 import { sendImageToCloudinary } from '../../utils/sendImageToCloudinary';
 
-const UploadDocument = async (file: Express.Multer.File, payload: any) => {
+const UploadDocument = async (file:any, payload: any) => {
   const { entityId, file_type } = payload;
 
   if (!file) {
