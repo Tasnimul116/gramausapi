@@ -13,9 +13,6 @@
     "prettier:fix": "npx prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": "20.x"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -49,14 +46,14 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
-    "@types/cookie-parser": "^1.4.6",
+    "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.16",
     "@types/ejs": "^3.1.5",
-    "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/multer": "^1.4.11",
+    "@types/express": "^4.17.23",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^1.4.13",
     "@types/node-cron": "^3.0.11",
-    "@types/nodemailer": "^6.4.14",
+    "@types/nodemailer": "^6.4.17",
     "@types/pdf-parse": "^1.1.5",
     "@types/request-ip": "^0.0.41",
     "@typescript-eslint/eslint-plugin": "^6.11.0",

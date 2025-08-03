@@ -31,14 +31,12 @@
 //   createResetToken
 // };
 
-import jwt, { JwtPayload } from "jsonwebtoken";
+import jwt, { JwtPayload, SignOptions } from "jsonwebtoken";
 
 const createToken = (
   jwtPayload: JwtPayload,
   secret: string,
-  options: {
-    expiresIn: string;
-  }
+  options: SignOptions
 ) => {
   return jwt.sign(jwtPayload, secret, options);
 };
