@@ -5,6 +5,7 @@ export interface NewsModule {
     title: string;
     content: string;
     images: string[];
+    additionalFile:string;
     createdAt: string;
     
   }

@@ -16,7 +16,9 @@ const newsSchema = new Schema<NewsModule>(
     images: {
       type: [{type: String}],
     },
-
+    additionalFile:{
+      type: String
+    }
     
   },
   {
